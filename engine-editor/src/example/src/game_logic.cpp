@@ -122,27 +122,27 @@ void _physics_example() {
 
 	// Async asset loading test
 	Texture* albedo = new Texture();
-	albedo->setSource(TextureType::ALBEDO, "./src/example/assets/textures/sci-fi/albedo.jpg");
+	albedo->setSource(TextureType::ALBEDO, "../example/assets/textures/sci-fi/albedo.jpg");
 	loader.createAsync(albedo);
 
 	Texture* normal = new Texture();
-	normal->setSource(TextureType::NORMAL, "./src/example/assets/textures/sci-fi/normal.jpg");
+	normal->setSource(TextureType::NORMAL, "../example/assets/textures/sci-fi/normal.jpg");
 	loader.createAsync(normal);
 
 	Texture* metallic = new Texture();
-	metallic->setSource(TextureType::METALLIC, "./src/example/assets/textures/sci-fi/metallic.jpg");
+	metallic->setSource(TextureType::METALLIC, "../example/assets/textures/sci-fi/metallic.jpg");
 	loader.createAsync(metallic);
 
 	Texture* roughness = new Texture();
-	roughness->setSource(TextureType::ROUGHNESS, "./src/example/assets/textures/sci-fi/roughness.jpg");
+	roughness->setSource(TextureType::ROUGHNESS, "../example/assets/textures/sci-fi/roughness.jpg");
 	loader.createAsync(roughness);
 
 	Texture* emissive = new Texture();
-	emissive->setSource(TextureType::EMISSIVE, "./src/example/assets/textures/sci-fi/emissive.jpg");
+	emissive->setSource(TextureType::EMISSIVE, "../example/assets/textures/sci-fi/emissive.jpg");
 	loader.createAsync(emissive);
 
 	Texture* occlusion = new Texture();
-	occlusion->setSource(TextureType::OCCLUSION, "./src/example/assets/textures/sci-fi/occlusion.jpg");
+	occlusion->setSource(TextureType::OCCLUSION, "../example/assets/textures/sci-fi/occlusion.jpg");
 	loader.createAsync(occlusion);
 
 	LitMaterial* cubeMaterial = new LitMaterial();
@@ -157,7 +157,7 @@ void _physics_example() {
 
 	// Model async loading example
 	Model* asyncModel = new Model();
-	asyncModel->setSource("./src/example/assets/models/mannequin.fbx");
+	asyncModel->setSource("../example/assets/models/mannequin.fbx");
 	loader.createAsync(asyncModel);
 
 	EntityContainer e("Async Model", ECS::createEntity());

@@ -22,3 +22,7 @@ find_package(imguizmo CONFIG REQUIRED)
 add_subdirectory(engine-core)
 add_subdirectory(engine-editor)
 #add_subdirectory(examples)
+
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/engine-core/shaders/ DESTINATION ${CMAKE_BINARY_DIR}/shaders)
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/engine-editor/examples/ DESTINATION ${CMAKE_BINARY_DIR}/examples)
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/resources/ DESTINATION ${CMAKE_BINARY_DIR}/resources)

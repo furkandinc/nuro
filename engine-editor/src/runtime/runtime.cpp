@@ -71,10 +71,10 @@ namespace Runtime {
 		ResourceLoader& loader = ApplicationContext::getResourceLoader();
 
 		// Load shaders
-		ShaderPool::loadAllSync("./src/core/shaders/materials");
-		ShaderPool::loadAllSync("./src/core/shaders/postprocessing");
-		ShaderPool::loadAllSync("./src/core/shaders/gizmo");
-		ShaderPool::loadAllSync("./src/core/shaders/passes");
+		ShaderPool::loadAllSync("../shaders/materials");
+		ShaderPool::loadAllSync("../shaders/postprocessing");
+		ShaderPool::loadAllSync("../shaders/gizmo");
+		ShaderPool::loadAllSync("../shaders/passes");
 
 		// Create default texture
 		gDefaultTexture->setSource(TextureType::IMAGE_RGBA, "../resources/icons/default_texture.png");
