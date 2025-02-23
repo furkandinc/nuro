@@ -42,14 +42,14 @@ void UIFlex::beginFlex(ImGuiID id, FlexType type, float width, float height, Jus
 		ImGui::Dummy(ImVec2(0.0f, margin.top));
 
 		ImVec2 rowSize = getFlexRowSize(width, height);
-		//ImGui::BeginHorizontal(id, rowSize, mapAlignment(alignment)); // TODO incorrect ImGui version thru cmake
+		ImGui::BeginHorizontal(id, rowSize, mapAlignment(alignment));
 
 		if (margin.left != 0)
 			ImGui::Dummy(ImVec2(margin.left, 0.0f));
 
 		if (justification == Justification::CENTER || justification == Justification::END)
 		{
-			//ImGui::Spring(0.5f); // TODO incorrect ImGui version thru cmake
+			ImGui::Spring(0.5f);
 		}
 
 		lastFlex.type = type;
@@ -71,10 +71,10 @@ void UIFlex::endFlex()
 
 		if (lastFlex.justification == Justification::CENTER || lastFlex.justification == Justification::START)
 		{
-			//ImGui::Spring(0.5f); // TODO incorrect ImGui version thru cmake
+			ImGui::Spring(0.5f);
 		}
 
-		//ImGui::EndHorizontal(); // TODO incorrect ImGui version thru cmake
+		ImGui::EndHorizontal();
 		ImGui::PopStyleVar();
 
 		ImGui::Dummy(ImVec2(0.0f, lastFlex.margin.bottom));

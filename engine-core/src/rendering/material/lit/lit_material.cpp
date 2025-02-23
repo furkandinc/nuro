@@ -76,7 +76,7 @@ void LitMaterial::bind() const
 	// General configuration
 	shader->setFloat("configuration.gamma", profile->color.gamma);
 	shader->setVec2("configuration.viewportResolution", viewport->getResolution());
-
+	
 	// Shadow parameters
 	shader->setBool("configuration.castShadows", castShadows);
 
@@ -144,11 +144,13 @@ void LitMaterial::bind() const
 	}
 	shader->setFloat("material.normalMapIntensity", normalMapIntensity);
 	shader->setBool("material.enableOcclusionMap", occlusionMap);
-	if (occlusionMap)
-	{
-		glActiveTexture(GL_TEXTURE0 + OCCLUSION_UNIT);
-		glBindTexture(GL_TEXTURE_2D, occlusionMap->id());
-	}
+
+	// TODO Turned off occlusion map temporarily to prevent crash related async loader
+	//if (occlusionMap)
+	//{
+	//	glActiveTexture(GL_TEXTURE0 + OCCLUSION_UNIT);
+	//	glBindTexture(GL_TEXTURE_2D, occlusionMap->id());
+	//}
 
 	shader->setBool("material.enableEmissiveMap", emissiveMap);
 	if (emissiveMap)

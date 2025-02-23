@@ -73,18 +73,34 @@ set(SOURCE_FILES
 	src/ui/workspace_bar/workspace_bar.cpp
 )
 
-add_executable(${PROJECT_NAME} ${HEADER_FILES} ${SOURCE_FILES})
+set(IMGUI_SOURCES
+	imgui/imgui.cpp
+    imgui/ImGuizmo.cpp
+    imgui/imgui_demo.cpp
+    imgui/imgui_draw.cpp
+    imgui/imgui_impl_glfw.cpp
+    imgui/imgui_impl_opengl3.cpp
+    imgui/imgui_tables.cpp
+    imgui/imgui_widgets.cpp
+    imgui/implot.cpp
+    imgui/implot_demo.cpp
+    imgui/implot_items.cpp
+)
+
+add_executable(${PROJECT_NAME} ${HEADER_FILES} ${SOURCE_FILES} ${IMGUI_SOURCES})
 
 target_include_directories(${PROJECT_NAME}
 	PUBLIC 
-		${CMAKE_CURRENT_LIST_DIR}/include)
+		${CMAKE_CURRENT_LIST_DIR}/include
+	PRIVATE 
+		${CMAKE_CURRENT_LIST_DIR}/imgui)
 
 target_link_libraries(${PROJECT_NAME}
 	PRIVATE
 		nuro::core
-		imgui::imgui
-		implot::implot
-		imguizmo::imguizmo
+		# imgui::imgui # imgui is imported from local directory
+		# implot::implot
+		# imguizmo::imguizmo
 		glm::glm
 		nlohmann_json::nlohmann_json
 )

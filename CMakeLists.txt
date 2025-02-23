@@ -14,10 +14,10 @@ find_package(Stb REQUIRED)
 find_package(unofficial-omniverse-physx-sdk CONFIG REQUIRED)
 
 #editor packages
-find_package(imgui CONFIG REQUIRED)
-find_package(implot CONFIG REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
-find_package(imguizmo CONFIG REQUIRED)
+# find_package(imgui CONFIG REQUIRED) # imgui is imported from local directory
+#find_package(implot CONFIG REQUIRED)
+#find_package(imguizmo CONFIG REQUIRED)
 
 add_subdirectory(engine-core)
 add_subdirectory(engine-editor)
