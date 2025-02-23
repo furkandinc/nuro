@@ -23,6 +23,8 @@ set(HEADER_FILES
 	include/rendering/gizmos/gizmos.h
 	include/rendering/gizmos/gizmo_color.h
 	include/rendering/gizmos/imgizmo.h
+	include/rendering/gizmos/component_gizmos.h
+	include/rendering/gizmos/editor_gizmo_color.h
 	include/rendering/icons/icon_pool.h
 	include/rendering/material/imaterial.h
 	include/rendering/material/lit/lit_material.h
@@ -72,6 +74,7 @@ set(SOURCE_FILES
 	src/physics/rigidbody/rigidbody.cpp
 	src/physics/utils/px_translator.cpp
 	src/rendering/culling/bounding_volume.cpp
+	src/rendering/gizmos/component_gizmos.cpp
 	src/rendering/gizmos/imgizmo.cpp
 	src/rendering/icons/icon_pool.cpp
 	src/rendering/material/lit/lit_material.cpp

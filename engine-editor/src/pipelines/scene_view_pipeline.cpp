@@ -11,8 +11,8 @@
 
 #include <runtime/runtime.h>
 #include <ui/windows/viewport_window.h>
-#include <gizmos/component_gizmos.h>
-#include <gizmos/editor_gizmo_color.h>
+#include <rendering/gizmos/component_gizmos.h>
+#include <rendering/gizmos/editor_gizmo_color.h>
 
 // initialize with users editor settings later
 SceneViewPipeline::SceneViewPipeline() : wireframe(false),

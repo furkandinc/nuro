@@ -1,8 +1,6 @@
 project(engine-editor)
 
 set(HEADER_FILES 
-	include/gizmos/component_gizmos.h
-	include/gizmos/editor_gizmo_color.h
 	include/example/src/game_logic.h
 	include/pipelines/game_view_pipeline.h
 	include/pipelines/preview_pipeline.h
@@ -41,7 +39,6 @@ set(HEADER_FILES
 )
 
 set(SOURCE_FILES 
-	src/gizmos/component_gizmos.cpp
 	src/example/src/game_logic.cpp
 	src/main.cpp
 	src/pipelines/game_view_pipeline.cpp

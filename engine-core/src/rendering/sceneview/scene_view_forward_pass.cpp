@@ -9,12 +9,7 @@
 #include <rendering/material/imaterial.h>
 #include <rendering/transformation/transformation.h>
 #include <rendering/material/unlit/unlit_material.h>
-
-// TODO EDITOR CODE HERE
-#define COMPONENT_GIZMOS 0
-#if COMPONENT_GIZMOS
 #include <rendering/gizmos/component_gizmos.h>
-#endif
 
 SceneViewForwardPass::SceneViewForwardPass(const Viewport& viewport) : wireframe(false),
 clearColor(glm::vec4(0.0f)),
@@ -269,10 +264,8 @@ void SceneViewForwardPass::renderSelectedEntity(EntityContainer* entity, const g
 	// Get camera transform
 	TransformComponent& cameraTransform = std::get<0>(camera);
 
-#if COMPONENT_GIZMOS
 	// Render selected entitites gizmos if needed
 	if (gizmos) ComponentGizmos::renderEntityGizmos(*gizmos, *entity);
-#endif
 
 	// Render the selected entity and write to stencil
 	glStencilFunc(GL_ALWAYS, 1, 0xFF); // Always pass, write 1 to stencil buffer

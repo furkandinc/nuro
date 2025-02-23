@@ -1,8 +1,8 @@
-#include <gizmos/component_gizmos.h>
+#include <rendering/gizmos/component_gizmos.h>
 
 #include <glm/glm.hpp>
 
-#include <gizmos/editor_gizmo_color.h>
+#include <rendering/gizmos/editor_gizmo_color.h>
 
 namespace ComponentGizmos {
 
