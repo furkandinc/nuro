@@ -5,7 +5,7 @@
 
 #include <resource/resource.h>
 
-enum class TextureType
+enum class  TextureType
 {
 	EMPTY,
 
@@ -21,7 +21,7 @@ enum class TextureType
 	IMAGE_RGBA,
 };
 
-class Texture : public Resource
+class  Texture : public Resource
 {
 public:
 	Texture();

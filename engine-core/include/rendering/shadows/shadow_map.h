@@ -7,7 +7,7 @@
 #include <ecs/ecs_collection.h>
 #include <rendering/shader/shader.h>
 
-class ShadowMap
+class  ShadowMap
 {
 public:
 	explicit ShadowMap(uint32_t resolutionWidth, uint32_t resolutionHeight);

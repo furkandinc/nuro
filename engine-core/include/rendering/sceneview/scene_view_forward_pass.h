@@ -8,11 +8,11 @@
 #include <ecs/ecs_collection.h>
 #include <rendering/gizmos/imgizmo.h>
 
-class Skybox;
-class IMaterial;
-class UnlitMaterial;
+class  Skybox;
+class  IMaterial;
+class  UnlitMaterial;
 
-class SceneViewForwardPass
+class  SceneViewForwardPass
 {
 public:
 	explicit SceneViewForwardPass(const Viewport& viewport);

@@ -1,4 +1,4 @@
-#include "post_processing_window.h"
+#include <ui/windows/post_processing_window.h>
 
 PostProcessingWindow::PostProcessingWindow(PostProcessing::Profile& targetProfile) : targetProfile(targetProfile)
 {

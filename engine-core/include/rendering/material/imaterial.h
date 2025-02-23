@@ -11,7 +11,7 @@
    !!					   !!
    !!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-class IMaterial
+class  IMaterial
 {
 public:
 	virtual ~IMaterial() {}

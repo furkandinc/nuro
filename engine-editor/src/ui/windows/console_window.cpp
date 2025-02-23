@@ -1,4 +1,4 @@
-#include "console_window.h"
+#include <ui/windows/console_window.h>
 
 std::deque<ConsoleLog> ConsoleWindow::logs;
 std::vector<ConsoleLog> ConsoleWindow::logsToAdd;
@@ -115,7 +115,7 @@ void ConsoleWindow::drawLog(ImDrawList& drawList, const ConsoleLog& log)
 		textColor = IM_COL32(255, 255, 100, 255);
 		backgroundColor = IM_COL32(35, 35, 25, 255);
 		break;
-	case ConsoleLogType::ERROR:
+	case ConsoleLogType::ERR:
 		if (!showErrors) return;
 		textColor = IM_COL32(255, 100, 100, 255);
 		backgroundColor = IM_COL32(35, 25, 25, 255);
@@ -149,7 +149,7 @@ void ConsoleWindow::drawLog(ImDrawList& drawList, const ConsoleLog& log)
 		drawList.AddText(contentPosition, textColor, warningIcon);
 		contentPosition.x += 21.0f;
 		break;
-	case ConsoleLogType::ERROR:
+	case ConsoleLogType::ERR:
 		drawList.AddText(contentPosition, textColor, errorIcon);
 		contentPosition.x += 21.0f;
 		break;

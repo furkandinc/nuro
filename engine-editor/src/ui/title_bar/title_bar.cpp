@@ -1,11 +1,11 @@
-#include "title_bar.h"
+#include <ui/title_bar/title_bar.h>
 
-#include "../src/core/utils/console.h"
-#include "../src/core/input/cursor.h"
-#include "../src/core/context/application_context.h"
+#include <utils/console.h>
+#include <input/cursor.h>
+#include <context/application_context.h>
 
-#include "../src/runtime/runtime.h"
-#include "../src/ui/collection/IconsFontAwesome6.h"
+#include <runtime/runtime.h>
+#include <ui/collection/IconsFontAwesome6.h>
 
 TitleBar::TitleBar() : style(),
 titleBarPosition(ImVec2(0.0f, 0.0f)),

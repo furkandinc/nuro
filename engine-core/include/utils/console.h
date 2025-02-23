@@ -5,7 +5,7 @@
 
 namespace Console
 {
-	enum class TextColor
+	enum class  TextColor
 	{
 		Black = 30,
 		Red = 31,
@@ -17,7 +17,7 @@ namespace Console
 		White = 37,
 	};
 
-	enum class BackgroundColor
+	enum class  BackgroundColor
 	{
 		Black = 40,
 		Red = 41,
@@ -32,25 +32,25 @@ namespace Console
 	namespace out {
 
 		// Prints an error and terminates the program if possible
-		void error(std::string origin, std::string error, std::string additional_info = "");
+		void  error(std::string origin, std::string error, std::string additional_info = "");
 
 		// Prints a warning
-		void warning(std::string origin, std::string warning, std::string additional_info = "");
+		void  warning(std::string origin, std::string warning, std::string additional_info = "");
 
 		// Prints that some specified process has started
-		void processStart(std::string origin, std::string process);
+		void  processStart(std::string origin, std::string process);
 
 		// Prints the state of some process
-		void processState(std::string origin, std::string process);
+		void  processState(std::string origin, std::string process);
 
 		// Prints an information from some process without providing information about the process
-		void processInfo(std::string info);
+		void  processInfo(std::string info);
 
 		// Prints that some specified process is done
-		void processDone(std::string origin, std::string process);
+		void  processDone(std::string origin, std::string process);
 
 		// Prints the ASCII welcome message
-		void welcome();
+		void  welcome();
 
 	}
 };

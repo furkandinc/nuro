@@ -1,6 +1,6 @@
 #pragma once
 
-enum class API {
+enum class  API {
 	NONE,
 	OPENGL
 };

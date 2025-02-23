@@ -1,9 +1,9 @@
-#include "asset_browser_window.h"
+#include <ui/windows/asset_browser_window.h>
 
 #include <algorithm>
-#include <entt.hpp>
+#include <entt/entt.hpp>
 
-#include "../src/ui/windows/insight_panel_window.h"
+#include <ui/windows/insight_panel_window.h>
 
 AssetBrowserWindow::AssetBrowserWindow() : assetScale(1.0f),
 targetAssetScale(1.0f),

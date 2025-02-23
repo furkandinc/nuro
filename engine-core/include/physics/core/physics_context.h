@@ -5,7 +5,7 @@
 
 #include <physics/core/physics_bridge.h>
 
-class PhysicsContext
+class  PhysicsContext
 {
 public:
 	PhysicsContext();

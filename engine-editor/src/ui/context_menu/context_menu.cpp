@@ -1,8 +1,8 @@
-#include "context_menu.h"
+#include <ui/context_menu/context_menu.h>
 
 #include <imgui.h>
 
-#include "../src/ui/editor_ui.h"
+#include <ui/editor_ui.h>
 
 namespace ContextMenu {
 

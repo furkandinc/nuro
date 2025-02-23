@@ -1,12 +1,90 @@
 project(engine-editor)
 
-add_executable(${PROJECT_NAME})
+set(HEADER_FILES 
+	include/gizmos/component_gizmos.h
+	include/gizmos/editor_gizmo_color.h
+	include/example/src/game_logic.h
+	include/pipelines/game_view_pipeline.h
+	include/pipelines/preview_pipeline.h
+	include/pipelines/scene_view_pipeline.h
+	include/project/project.h
+	include/runtime/runtime.h
+	include/ui/collection/IconsFontAwesome6.h
+	include/ui/components/im_components.h
+	include/ui/components/inspectable_components.h
+	include/ui/components/toggle_bar.h
+	include/ui/context_menu/context_menu.h
+	include/ui/dynamic_drawing/delta.h
+	include/ui/dynamic_drawing/dynamic_content.h
+	include/ui/dynamic_drawing/dynamic_drawing.h
+	include/ui/dynamic_drawing/dynamic_text.h
+	include/ui/dynamic_drawing/enums.h
+	include/ui/dynamic_drawing/utils.h
+	include/ui/editor_ui.h
+	include/ui/footer/footer.h
+	include/ui/inspectables/entity_inspectable.h
+	include/ui/inspectables/inspectable.h
+	include/ui/inspectables/welcome_inspectable.h
+	include/ui/misc/ui_flex.h
+	include/ui/title_bar/title_bar.h
+	include/ui/utils/ui_utils.h
+	include/ui/windows/asset_browser_window.h
+	include/ui/windows/console_window.h
+	include/ui/windows/diagnostics_window.h
+	include/ui/windows/editor_window.h
+	include/ui/windows/game_window.h
+	include/ui/windows/insight_panel_window.h
+	include/ui/windows/post_processing_window.h
+	include/ui/windows/registry_window.h
+	include/ui/windows/viewport_window.h
+	include/ui/workspace_bar/workspace_bar.h
+)
+
+set(SOURCE_FILES 
+	src/gizmos/component_gizmos.cpp
+	src/example/src/game_logic.cpp
+	src/main.cpp
+	src/pipelines/game_view_pipeline.cpp
+	src/pipelines/preview_pipeline.cpp
+	src/pipelines/scene_view_pipeline.cpp
+	src/project/project.cpp
+	src/runtime/runtime.cpp
+	src/ui/components/im_components.cpp
+	src/ui/components/inspectable_components.cpp
+	src/ui/components/toggle_bar.cpp
+	src/ui/context_menu/context_menu.cpp
+	src/ui/dynamic_drawing/dynamic_content.cpp
+	src/ui/dynamic_drawing/dynamic_text.cpp
+	src/ui/editor_ui.cpp
+	src/ui/footer/footer.cpp
+	src/ui/inspectables/entity_inspectable.cpp
+	src/ui/inspectables/welcome_inspectable.cpp
+	src/ui/misc/ui_flex.cpp
+	src/ui/title_bar/title_bar.cpp
+	src/ui/utils/ui_utils.cpp
+	src/ui/windows/asset_browser_window.cpp
+	src/ui/windows/console_window.cpp
+	src/ui/windows/diagnostics_window.cpp
+	src/ui/windows/game_window.cpp
+	src/ui/windows/insight_panel_window.cpp
+	src/ui/windows/post_processing_window.cpp
+	src/ui/windows/registry_window.cpp
+	src/ui/windows/viewport_window.cpp
+	src/ui/workspace_bar/workspace_bar.cpp
+)
+
+add_executable(${PROJECT_NAME} ${HEADER_FILES} ${SOURCE_FILES})
 
 target_include_directories(${PROJECT_NAME}
 	PUBLIC 
-		${PROJECT_SOURCE_DIR}/include)
+		${CMAKE_CURRENT_LIST_DIR}/include)
 
 target_link_libraries(${PROJECT_NAME}
 	PRIVATE
-		nuro::core)
-	
+		nuro::core
+		imgui::imgui
+		implot::implot
+		imguizmo::imguizmo
+		glm::glm
+		nlohmann_json::nlohmann_json
+)

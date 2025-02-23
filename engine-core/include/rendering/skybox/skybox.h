@@ -7,9 +7,9 @@
 
 #include <rendering/skybox/cubemap.h>
 
-class Shader;
+class  Shader;
 
-class Skybox
+class  Skybox
 {
 public:
 	Skybox();

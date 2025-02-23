@@ -11,7 +11,7 @@
    !!					   !!
    !!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-class UnlitMaterial : public IMaterial
+class  UnlitMaterial : public IMaterial
 {
 public:
 	UnlitMaterial();

@@ -2,7 +2,7 @@
 
 #include <glm/glm.hpp>
 
-class PreprocessorPass
+class  PreprocessorPass
 {
 public:
 	// Performs the preprocessing needed before rendering for all entities

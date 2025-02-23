@@ -2,7 +2,7 @@
 
 #include <string>
 
-class Texture;
+class  Texture;
 
 namespace IconPool {
 

@@ -8,11 +8,11 @@
 #include <resource/resource.h>
 #include <rendering/model/mesh.h>
 
-class aiScene;
-class aiNode;
-class aiMesh;
+class  aiScene;
+class  aiNode;
+class  aiMesh;
 
-class Model : public Resource
+class  Model : public Resource
 {
 public:
 	struct Metrics

@@ -5,9 +5,9 @@
 
 #include <rendering/gizmos/gizmos.h>
 
-class Model;
+class  Model;
 
-class BoundingVolume
+class  BoundingVolume
 {
 public:
 	virtual void update(Model* model, glm::vec3 position, glm::quat rotation, glm::vec3 scale) {};
@@ -16,7 +16,7 @@ public:
 	virtual void draw(IMGizmo& imGizmoInstance, glm::vec4 color) {};
 };
 
-class BoundingSphere : public BoundingVolume
+class  BoundingSphere : public BoundingVolume
 {
 public:
 	BoundingSphere();
@@ -30,7 +30,7 @@ public:
 	float radius;
 };
 
-class BoundingAABB : public BoundingVolume
+class  BoundingAABB : public BoundingVolume
 {
 public:
 	BoundingAABB();

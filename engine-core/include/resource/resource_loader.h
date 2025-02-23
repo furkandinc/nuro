@@ -9,7 +9,7 @@
 
 #include <resource/resource.h>
 
-class ResourceLoader
+class  ResourceLoader
 {
 public:
 	struct WorkerState {

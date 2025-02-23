@@ -1,9 +1,8 @@
-
-#include "project.h"
+#include <project/project.h>
 
 #include <fstream>
 
-#include "../src/core/utils/console.h"
+#include <utils/console.h>
 
 Project::Project() : _configuration(),
 _path()

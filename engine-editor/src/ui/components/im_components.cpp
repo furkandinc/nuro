@@ -1,16 +1,16 @@
-#include "im_components.h"
+#include <ui/components/im_components.h>
 
 #include <array>
 #include <implot.h>
 #include <algorithm>
 #include <imgui_internal.h>
 
-#include "../src/ui/editor_ui.h"
-#include "../src/ui/misc/ui_flex.h"
-#include "../src/ui/utils/ui_utils.h"
+#include <ui/editor_ui.h>
+#include <ui/misc/ui_flex.h>
+#include <ui/utils/ui_utils.h>
 
-#include "../src/core/utils/console.h"
-#include "../src/ui/collection/IconsFontAwesome6.h"
+#include <utils/console.h>
+#include <ui/collection/IconsFontAwesome6.h>
 
 namespace IMComponents {
 

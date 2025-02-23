@@ -1,6 +1,6 @@
 #pragma once
 
-#include <cstdint>
+#include <stdint.h>
 #include <glm/glm.hpp>
 
 namespace Input
@@ -131,7 +131,7 @@ namespace Key {
     static constexpr int32_t TAB = 258;
     static constexpr int32_t BACKSPACE = 259;
     static constexpr int32_t INSERT = 260;
-    static constexpr int32_t DELETE = 261;
+    static constexpr int32_t _DELETE = 261; // TODO temporarily rename to compile
     static constexpr int32_t HOME = 268;
     static constexpr int32_t END = 269;
     static constexpr int32_t PAGE_UP = 266;

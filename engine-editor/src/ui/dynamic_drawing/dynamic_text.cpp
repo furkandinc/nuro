@@ -1,4 +1,4 @@
-#include "dynamic_text.h"
+#include <ui/dynamic_drawing/dynamic_text.h>
 
 DynamicText::DynamicText(ImFont* font) : font(font)
 {

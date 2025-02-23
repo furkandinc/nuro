@@ -4,7 +4,7 @@
 #include <glad/glad.h>
 #include <glm/glm.hpp>
 
-class Viewport
+class  Viewport
 {
 public:
 	Viewport();

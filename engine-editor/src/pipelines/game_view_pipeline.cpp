@@ -1,17 +1,17 @@
-#include "game_view_pipeline.h"
+#include <pipelines/game_view_pipeline.h>
 
-#include "../src/core/input/input.h"
-#include "../src/core/rendering/transformation/transformation.h"
-#include "../src/core/utils/console.h"
-#include "../src/core/diagnostics/profiler.h"
-#include "../src/core/rendering/material/lit/lit_material.h"
-#include "../src/core/rendering/culling/bounding_volume.h"
-#include "../src/core/rendering/skybox/skybox.h"
-#include "../src/core/ecs/ecs_collection.h"
-#include "../src/core/rendering/shadows/shadow_map.h"
+#include <input/input.h>
+#include <rendering/transformation/transformation.h>
+#include <utils/console.h>
+#include <diagnostics/profiler.h>
+#include <rendering/material/lit/lit_material.h>
+#include <rendering/culling/bounding_volume.h>
+#include <rendering/skybox/skybox.h>
+#include <ecs/ecs_collection.h>
+#include <rendering/shadows/shadow_map.h>
 
-#include "../src/ui/windows/viewport_window.h"
-#include "../src/runtime/runtime.h"
+#include <ui/windows/viewport_window.h>
+#include <runtime/runtime.h>
 
 // initialize with users editor settings later
 GameViewPipeline::GameViewPipeline() : drawSkybox(true),
@@ -61,7 +61,7 @@ void GameViewPipeline::render()
 
 	// Get transformation matrices
 	glm::mat4 view = Transformation::view(cameraTransform.position, cameraTransform.rotation);
-	glm::mat4 projection = Transformation::projection(cameraHandle.fov, viewport.getAspect(), cameraHandle.near, cameraHandle.far);
+	glm::mat4 projection = Transformation::projection(cameraHandle.fov, viewport.getAspect(), cameraHandle._near, cameraHandle._far);
 	glm::mat4 viewProjection = projection * view;
 	glm::mat3 viewNormal = glm::transpose(glm::inverse(glm::mat3(view)));
 

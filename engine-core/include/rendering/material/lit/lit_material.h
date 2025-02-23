@@ -3,17 +3,17 @@
 #include <cstdint>
 #include <glm/glm.hpp>
 
-#include "../imaterial.h"
+#include <rendering/material/imaterial.h>
 
 #include <viewport/viewport.h>
 #include <ecs/ecs_collection.h>
 #include <rendering/texture/texture.h>
 #include <rendering/postprocessing/post_processing.h>
 
-class ShadowDisk;
-class ShadowMap;
+class  ShadowDisk;
+class  ShadowMap;
 
-class LitMaterial : public IMaterial
+class  LitMaterial : public IMaterial
 {
 public:
 	LitMaterial();

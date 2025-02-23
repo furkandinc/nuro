@@ -1,14 +1,14 @@
-#include "entity_inspectable.h"
+#include <ui/inspectables/entity_inspectable.h>
 
-#include <glm.hpp>
+#include <glm/glm.hpp>
 
-#include "../src/core/ecs/components.h"
+#include <ecs/components.h>
 
-#include "../src/ui/editor_ui.h"
-#include "../src/ui/windows/registry_window.h"
-#include "../src/ui/components/im_components.h"
-#include "../src/ui/windows/insight_panel_window.h"
-#include "../src/ui/components/inspectable_components.h"
+#include <ui/editor_ui.h>
+#include <ui/windows/registry_window.h>
+#include <ui/components/im_components.h>
+#include <ui/windows/insight_panel_window.h>
+#include <ui/components/inspectable_components.h>
 
 EntityInspectable::EntityInspectable(HierarchyItem& item) : item(item)
 {

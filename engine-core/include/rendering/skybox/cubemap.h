@@ -6,7 +6,7 @@
 
 #include <resource/resource.h>
 
-class Cubemap : public Resource
+class  Cubemap : public Resource
 {
 public:
 	Cubemap();
@@ -29,7 +29,7 @@ protected:
 
 private:
 	struct Source {
-		enum class Type {
+		enum class  Type {
 			CROSS,
 			INDIVIDUAL
 		};

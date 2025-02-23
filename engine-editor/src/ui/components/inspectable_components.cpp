@@ -1,4 +1,4 @@
-#include "inspectable_components.h"
+#include <ui/components/inspectable_components.h>
 
 #define IMGUI_DEFINE_MATH_OPERATORS
 #include <string>
@@ -6,11 +6,11 @@
 #include <cstdint>
 #include <unordered_map>
 
-#include "../src/core/rendering/icons/icon_pool.h"
+#include <rendering/icons/icon_pool.h>
 
-#include "../src/ui/editor_ui.h"
-#include "../src/ui/components/im_components.h"
-#include "../src/ui/collection/IconsFontAwesome6.h"
+#include <ui/editor_ui.h>
+#include <ui/components/im_components.h>
+#include <ui/collection/IconsFontAwesome6.h>
 
 namespace InspectableComponents {
 
@@ -169,8 +169,8 @@ namespace InspectableComponents {
 		{
 			_headline("General");
 			IMComponents::input("FOV", camera.fov);
-			IMComponents::input("Near", camera.near);
-			IMComponents::input("Far", camera.far);
+			IMComponents::input("Near", camera._near);
+			IMComponents::input("Far", camera._far);
 
 			_endComponent();
 		}

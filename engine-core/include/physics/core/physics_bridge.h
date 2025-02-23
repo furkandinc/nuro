@@ -5,7 +5,7 @@
 
 #include <ecs/ecs_collection.h>
 
-class PhysicsBridge
+class  PhysicsBridge
 {
 public:
 	PhysicsBridge(physx::PxPhysics*& physics, physx::PxScene*& scene);

@@ -8,9 +8,9 @@
 #include <viewport/viewport.h>
 #include <rendering/gizmos/imgizmo.h>
 
-class Skybox;
+class  Skybox;
 
-class ForwardPass
+class  ForwardPass
 {
 public:
 	explicit ForwardPass(const Viewport& viewport);

@@ -1,4 +1,4 @@
-#include "workspace_bar.h"
+#include <ui/workspace_bar/workspace_bar.h>
 
 WorkspaceBar::WorkspaceBar() : style(),
 position(ImVec2(0.0f, 0.0f)),

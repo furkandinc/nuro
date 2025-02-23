@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-class Shader;
+class  Shader;
 
 namespace ShaderPool
 {

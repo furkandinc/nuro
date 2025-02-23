@@ -105,7 +105,7 @@ set(SOURCE_FILES
 	src/viewport/viewport.cpp
 )
 
-add_library(${PROJECT_NAME} SHARED ${HEADER_FILES} ${SOURCE_FILES})
+add_library(${PROJECT_NAME} ${HEADER_FILES} ${SOURCE_FILES})
 add_library(nuro::core ALIAS ${PROJECT_NAME})
 
 target_include_directories(${PROJECT_NAME} 
@@ -114,14 +114,26 @@ target_include_directories(${PROJECT_NAME}
 		${Stb_INCLUDE_DIR})
 
 target_link_libraries(${PROJECT_NAME} 
+	PUBLIC
+		unofficial::omniverse-physx-sdk::sdk
+		glad::glad 
+		glm::glm 
 	PRIVATE 
 		assimp::assimp
 		EnTT::EnTT	
-		glad::glad 
 		glfw 
-		glm::glm 
-		unofficial::omniverse-physx-sdk::sdk
 )
+
+if (MSVC)
+   target_compile_definitions(${PROJECT_NAME}
+    PRIVATE 
+      DECL_SPEC_DATA=__declspec\(dllexport\) # build setting for the library: export
+      FOO_VAR=0
+    INTERFACE
+      DECL_SPEC_DATA=__declspec\(dllimport\) # for the consumer: import
+      FOO_VAR=1
+   )
+endif()
 
 # Optional: import the defined target to copy over the GPU acceleration libraries (3rd party provided by NVIDIA)
 if(TARGET unofficial::omniverse-physx-sdk::gpu-library)

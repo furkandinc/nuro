@@ -1,9 +1,9 @@
-#include "ui_utils.h"
+#include <ui/utils/ui_utils.h>
 
 #include <math.h>
 
-#include "../src/core/input/cursor.h"
-#include "../src/ui/editor_ui.h"
+#include <input/cursor.h>
+#include <ui/editor_ui.h>
 
 namespace UIUtils {
 

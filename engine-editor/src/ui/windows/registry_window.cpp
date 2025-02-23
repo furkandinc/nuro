@@ -1,11 +1,11 @@
-#include "registry_window.h"
+#include <ui/windows/registry_window.h>
 
 #include <algorithm>
 
-#include "../src/core/transform/transform.h"
+#include <transform/transform.h>
 
-#include "../src/ui/windows/insight_panel_window.h"
-#include "../src/ui/inspectables/entity_inspectable.h"
+#include <ui/windows/insight_panel_window.h>
+#include <ui/inspectables/entity_inspectable.h>
 
 enum DropType {
 	NO_DROP,

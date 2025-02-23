@@ -8,9 +8,9 @@
 #include <rendering/postprocessing/post_processing.h>
 #
 
-class Shader;
+class  Shader;
 
-class VelocityBuffer
+class  VelocityBuffer
 {
 public:
 	explicit VelocityBuffer(const Viewport& viewport);

@@ -1,34 +1,34 @@
-#include "runtime.h"
+#include <runtime/runtime.h>
 
 #include <glad/glad.h>
-#include <glm.hpp>
+#include <glm/glm.hpp>
 
 #include <thread>
 #include <chrono>
 
-#include "../src/ui/editor_ui.h"
-#include "../src/example/src/game_logic.h"
+#include <ui/editor_ui.h>
+#include <example/src/game_logic.h>
 
-#include "../src/core/rendering/model/model.h"
-#include "../src/core/rendering/shader/shader.h"
-#include "../src/core/rendering/skybox/cubemap.h"
-#include "../src/core/rendering/texture/texture.h"
-#include "../src/ui/windows/insight_panel_window.h"
-#include "../src/core/rendering/shader/shader_pool.h"
-#include "../src/core/rendering/shadows/shadow_map.h"
-#include "../src/core/rendering/shadows/shadow_disk.h"
-#include "../src/ui/inspectables/welcome_inspectable.h"
-#include "../src/core/rendering/material/lit/lit_material.h"
-#include "../src/core/rendering/transformation/transformation.h"
+#include <rendering/model/model.h>
+#include <rendering/shader/shader.h>
+#include <rendering/skybox/cubemap.h>
+#include <rendering/texture/texture.h>
+#include <ui/windows/insight_panel_window.h>
+#include <rendering/shader/shader_pool.h>
+#include <rendering/shadows/shadow_map.h>
+#include <rendering/shadows/shadow_disk.h>
+#include <ui/inspectables/welcome_inspectable.h>
+#include <rendering/material/lit/lit_material.h>
+#include <rendering/transformation/transformation.h>
 
-#include "../src/core/utils/console.h"
-#include "../src/core/time/time.h"
-#include "../src/core/physics/physics.h"
-#include "../src/core/viewport/viewport.h"
-#include "../src/core/ecs/ecs_collection.h"
-#include "../src/core/transform/transform.h"
-#include "../src/core/diagnostics/profiler.h"
-#include "../src/core/context/application_context.h"
+#include <utils/console.h>
+#include <time/time.h>
+#include <physics/physics.h>
+#include <viewport/viewport.h>
+#include <ecs/ecs_collection.h>
+#include <transform/transform.h>
+#include <diagnostics/profiler.h>
+#include <context/application_context.h>
 
 namespace Runtime {
 

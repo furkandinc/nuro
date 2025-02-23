@@ -1,18 +1,18 @@
-#include "scene_view_pipeline.h"
+#include <pipelines/scene_view_pipeline.h>
 
-#include "../src/core/utils/console.h"
-#include "../src/core/input/input.h"
-#include "../src/core/physics/physics.h"
-#include "../src/core/diagnostics/profiler.h"
-#include "../src/core/rendering/shadows/shadow_map.h"
-#include "../src/core/rendering/transformation/transformation.h"
-#include "../src/core/rendering/culling/bounding_volume.h"
-#include "../src/core/rendering/material/lit/lit_material.h"
+#include <utils/console.h>
+#include <input/input.h>
+#include <physics/physics.h>
+#include <diagnostics/profiler.h>
+#include <rendering/shadows/shadow_map.h>
+#include <rendering/transformation/transformation.h>
+#include <rendering/culling/bounding_volume.h>
+#include <rendering/material/lit/lit_material.h>
 
-#include "../src/runtime/runtime.h"
-#include "../src/ui/windows/viewport_window.h"
-#include "../src/gizmos/component_gizmos.h"
-#include "../src/gizmos/editor_gizmo_color.h"
+#include <runtime/runtime.h>
+#include <ui/windows/viewport_window.h>
+#include <gizmos/component_gizmos.h>
+#include <gizmos/editor_gizmo_color.h>
 
 // initialize with users editor settings later
 SceneViewPipeline::SceneViewPipeline() : wireframe(false),
@@ -83,7 +83,7 @@ void SceneViewPipeline::render()
 
 	// Get transformation matrices
 	view = Transformation::view(cameraTransform.position, cameraTransform.rotation);
-	projection = Transformation::projection(cameraHandle.fov, viewport.getAspect(), cameraHandle.near, cameraHandle.far);
+	projection = Transformation::projection(cameraHandle.fov, viewport.getAspect(), cameraHandle._near, cameraHandle._far);
 	glm::mat4 viewProjection = projection * view;
 	glm::mat3 viewNormal = glm::transpose(glm::inverse(glm::mat3(view)));
 

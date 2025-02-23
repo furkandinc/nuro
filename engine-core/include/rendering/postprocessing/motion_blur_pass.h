@@ -6,9 +6,9 @@
 #include <viewport/viewport.h>
 #include <rendering/postprocessing/post_processing.h>
 
-class Shader;
+class  Shader;
 
-class MotionBlurPass
+class  MotionBlurPass
 {
 public:
 	explicit MotionBlurPass(const Viewport& viewport);

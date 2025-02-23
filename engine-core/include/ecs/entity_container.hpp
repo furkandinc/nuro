@@ -19,7 +19,7 @@
 ///																///
 ///////////////////////////////////////////////////////////////////
 
-class EntityContainer {
+class  EntityContainer {
 public:
 	// Construct entity by root
 	explicit EntityContainer(std::string name, Entity root) : root(root), 
@@ -133,7 +133,7 @@ public:
 		registry.erase<T>(root);
 	}
 
-	// Compares entity class with ecs root
+	// Compares entity class  with ecs root
 	bool operator == (const Entity& other) const {
 		return root == other;
 	}

@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-class ShadowDisk
+class  ShadowDisk
 {
 public:
 	explicit ShadowDisk(uint32_t windowSize, uint32_t filterSize, uint32_t radius);

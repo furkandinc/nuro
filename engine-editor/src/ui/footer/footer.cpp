@@ -1,13 +1,13 @@
-#include "footer.h"
+#include <ui/footer/footer.h>
 
 #include <algorithm>
 
-#include "../src/core/context/application_context.h"
-#include "../src/core/utils/iohandler.h"
+#include <context/application_context.h>
+#include <utils/iohandler.h>
 
-#include "../src/core/utils/console.h"
+#include <utils/console.h>
 
-#include "../src/ui/components/im_components.h"
+#include <ui/components/im_components.h>
 
 Footer::Footer() : style(),
 footerPosition(ImVec2(0.0f, 0.0f)),

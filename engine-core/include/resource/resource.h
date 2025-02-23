@@ -3,7 +3,7 @@
 #include <string>
 #include <atomic>
 
-enum class ResourceState {
+enum class  ResourceState {
 	// Resource has not been initialized or loaded yet
 	EMPTY,
 
@@ -17,11 +17,11 @@ enum class ResourceState {
 	READY
 };
 
-class Resource
+class  Resource
 {
 protected:
 	// Protected methods and members are used and managed by resource loader only
-	friend class ResourceLoader;
+	friend class  ResourceLoader;
 
 	// Atomic state of the resource
 	std::atomic<ResourceState> state;

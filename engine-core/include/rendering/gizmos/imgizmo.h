@@ -7,10 +7,10 @@
 #include <rendering/texture/texture.h>
 #include <ecs/components.h>
 
-class Shader;
-class Model;
+class  Shader;
+class  Model;
 
-class IMGizmo
+class  IMGizmo
 {
 public:
 	IMGizmo();
@@ -79,7 +79,7 @@ private:
 		bool foreground;
 	};
 
-	enum class Shape
+	enum class  Shape
 	{
 		PLANE,
 		BOX,

@@ -1,8 +1,8 @@
-#include "dynamic_content.h"
+#include <ui/dynamic_drawing/dynamic_content.h>
 
-#include "utils.h"
-#include "enums.h"
-#include "delta.h"
+#include <ui/dynamic_drawing/utils.h>
+#include <ui/dynamic_drawing/enums.h>
+#include <ui/dynamic_drawing/delta.h>
 
 #include <algorithm>
 

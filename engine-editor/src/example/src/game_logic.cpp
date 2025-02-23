@@ -2,9 +2,9 @@
 // TEMPORARY CODE!
 //
 
-#include "game_logic.h"
+#include <example/src/game_logic.h>
 
-#include "../src/core/engine.h"
+#include <engine.h>
 
 #include <iostream>
 

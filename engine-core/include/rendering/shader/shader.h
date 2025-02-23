@@ -7,7 +7,7 @@
 
 #include <resource/resource.h>
 
-class Shader : public Resource
+class  Shader : public Resource
 {
 public:
 	Shader();

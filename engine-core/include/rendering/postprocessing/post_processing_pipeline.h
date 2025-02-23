@@ -8,9 +8,9 @@
 #include <rendering/postprocessing/bloom_pass.h>
 #include <viewport/viewport.h>
 
-class Shader;
+class  Shader;
 
-class PostProcessingPipeline
+class  PostProcessingPipeline
 {
 public:
 	explicit PostProcessingPipeline(const Viewport& viewport, const bool renderToScreen);

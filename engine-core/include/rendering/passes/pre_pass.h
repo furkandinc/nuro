@@ -7,7 +7,7 @@
 #include <viewport/viewport.h>
 #include <rendering/shader/shader.h>
 
-class PrePass
+class  PrePass
 {
 public:
 	explicit PrePass(const Viewport& viewport);

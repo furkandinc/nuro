@@ -7,9 +7,9 @@
 #include <viewport/viewport.h>
 #include <rendering/postprocessing/post_processing.h>
 
-class Shader;
+class  Shader;
 
-class SSAOPass
+class  SSAOPass
 {
 public:
 	explicit SSAOPass(Viewport& viewport);

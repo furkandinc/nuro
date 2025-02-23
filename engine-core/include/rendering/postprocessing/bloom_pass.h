@@ -6,9 +6,9 @@
 
 #include <viewport/viewport.h>
 
-class Shader;
+class  Shader;
 
-class BloomPass
+class  BloomPass
 {
 public:
 	explicit BloomPass(const Viewport& viewport);

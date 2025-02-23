@@ -1,4 +1,4 @@
-#include "editor_ui.h"
+#include <ui/editor_ui.h>
 
 #include <implot.h>
 #include <filesystem>
@@ -8,24 +8,24 @@
 #include <imgui_impl_glfw.h>
 #include <imgui_impl_opengl3.h>
 
-#include "../src/core/input/cursor.h"
-#include "../src/core/utils/console.h"
-#include "../src/core/context/application_context.h"
+#include <input/cursor.h>
+#include <utils/console.h>
+#include <context/application_context.h>
 
-#include "../src/ui/misc/ui_flex.h"
-#include "../src/runtime/runtime.h"
-#include "../src/ui/footer/footer.h"
-#include "../src/ui/title_bar/title_bar.h"
-#include "../src/ui/windows/game_window.h"
-#include "../src/ui/windows/viewport_window.h"
-#include "../src/ui/windows/console_window.h"
-#include "../src/ui/windows/registry_window.h"
-#include "../src/ui/components/im_components.h"
-#include "../src/ui/windows/diagnostics_window.h"
-#include "../src/ui/windows/insight_panel_window.h"
-#include "../src/ui/windows/asset_browser_window.h"
-#include "../src/ui/collection/IconsFontAwesome6.h"
-#include "../src/ui/windows/post_processing_window.h"
+#include <ui/misc/ui_flex.h>
+#include <runtime/runtime.h>
+#include <ui/footer/footer.h>
+#include <ui/title_bar/title_bar.h>
+#include <ui/windows/game_window.h>
+#include <ui/windows/viewport_window.h>
+#include <ui/windows/console_window.h>
+#include <ui/windows/registry_window.h>
+#include <ui/components/im_components.h>
+#include <ui/windows/diagnostics_window.h>
+#include <ui/windows/insight_panel_window.h>
+#include <ui/windows/asset_browser_window.h>
+#include <ui/collection/IconsFontAwesome6.h>
+#include <ui/windows/post_processing_window.h>
 
 namespace fs = std::filesystem;
 
