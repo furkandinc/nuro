@@ -4,6 +4,7 @@
 #include <glad/glad.h>
 
 #include <utils/console.h>
+#include <string.h>
 
 Cubemap::Cubemap() : source(),
 data(),

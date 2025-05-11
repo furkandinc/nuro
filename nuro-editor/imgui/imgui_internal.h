@@ -1011,7 +1011,8 @@ enum ImGuiLayoutType_
 };
 
 // Flags for LogBegin() text capturing function
-enum ImGuiLogFlags_;
+// FIX linux not build
+//enum ImGuiLogFlags_;
 enum ImGuiLayoutItemType_
 {
     ImGuiLayoutItemType_Item,

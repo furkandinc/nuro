@@ -1,9 +1,11 @@
 #include "profiler.h"
 
+#include <chrono>
+#include <unordered_map>
+
 namespace Profiler
 {
-
-	std::unordered_map<std::string, std::chrono::steady_clock::time_point> gProfiles = std::unordered_map<std::string, std::chrono::steady_clock::time_point>();
+	std::unordered_map<std::string, std::chrono::high_resolution_clock::time_point> gProfiles = std::unordered_map<std::string, std::chrono::high_resolution_clock::time_point>();
 	std::unordered_map<std::string, double> gTimes = std::unordered_map<std::string, double>();
 
 	bool _validateProfile(const std::string& identifier)
@@ -16,7 +18,7 @@ namespace Profiler
 		return gTimes.find(identifier) == gTimes.end() ? false : true;
 	}
 
-	std::chrono::steady_clock::time_point _now()
+	std::chrono::high_resolution_clock::time_point _now()
 	{
 		return std::chrono::high_resolution_clock::now();
 	}

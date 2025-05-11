@@ -378,7 +378,7 @@ namespace EditorUI {
 		return gFonts;
 	}
 
-	void EditorUI::setCursorType(int32_t cursorType)
+	void setCursorType(int32_t cursorType)
 	{
 		// Overwrite cursor type for current frame
 		gOverwriteCursor = true;

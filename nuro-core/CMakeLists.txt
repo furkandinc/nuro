@@ -161,6 +161,8 @@ target_link_libraries(${PROJECT_NAME}
 		reflectcpp::reflectcpp
 )
 
+target_compile_definitions(${PROJECT_NAME} PUBLIC DISABLE_CUDA_PHYSX=TRUE PX_SUPPORT_GPU_PHYSX=FALSE)
+
 if (MSVC)
    target_compile_definitions(${PROJECT_NAME}
     PRIVATE 

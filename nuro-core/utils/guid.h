@@ -46,6 +46,7 @@ THE SOFTWARE.
 #include <string_view>
 #include <utility>
 #include <iomanip>
+#include <cstdint>
 
 #define BEGIN_XG_NAMESPACE namespace XG {
 #define END_XG_NAMESPACE }
